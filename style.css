@@ -1,29 +1,29 @@
-*{
-   font-family: 'MuseoModerno', cursive; 
-   margin: 0;
-   padding: 0;
+* {
+  font-family: "MuseoModerno", cursive;
+  margin: 0;
+  padding: 0;
 }
-body{
-    background: #0a2633;
-    min-height: 3000px;
+body {
+  background: #0a2633;
+  min-height: 3000px;
 }
-#top{
-    position: relative;
-    width: 100%;
-    height: 150vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+header {
+  position: relative;
+  width: 100%;
+  height: 120vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#top:before{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 10px;
-    background: linear-gradient(to top,#0a2633,transparent);
-    z-index: 10;
+#top:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to top, #0e2630 20%, transparent);
+  z-index: 10;
 }
 /* #top:after{
     content: "";
@@ -36,19 +36,22 @@ body{
     z-index: 10;
     mix-blend-mode: color;
 } */
-#top img{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
+#top img {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
 }
-#top h1{
-    position: relative;
-    color: rgb(255, 255, 255);
-    font-size: 100px;
-    z-index: 1;
-    font-family: 'MuseoModerno';
+#top h1 {
+  position: relative;
+  top: -200px;
+  color: rgb(255, 255, 255);
+  font-size: 100px;
+  z-index: 1;
+  font-family: "MuseoModerno";
+}
+#road {
+  z-index: 10;
 }
