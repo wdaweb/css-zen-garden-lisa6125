@@ -1,0 +1,86 @@
+body {
+  width: 100vw;
+  height: 300vh;
+  overflow-x: hidden;
+  background: #0a2633;
+  color: aliceblue;
+  transition: 1s;
+}
+header {
+  width: 100vw;
+  height: 250vh;
+  background: url(./images/bg.png);
+  background-position: center 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  font-size: 52px;
+  text-align: center;
+  position: relative;
+  top: 0%;
+}
+header::before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background: url(./images/moon.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0%;
+  left: -5%;
+}
+header::after {
+  content: "";
+  width: 100vw;
+  height: 130vh;
+  background: url(./images/mountain2.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  z-index: 11;
+}
+header h1 {
+  color: aliceblue;
+  font-size: 58px;
+  font-family: "Rock Salt", cursive;
+  /* font-family: "Raleway", sans-serif; */
+  font-weight: 500;
+  z-index: 10;
+  position: relative;
+  margin: 0px auto;
+  top: 20%;
+  /*left: 30%; */
+}
+header h2 {
+  color: aliceblue;
+  font-size: 18px;
+  /* font-family: "Rock Salt", cursive; */
+  font-family: "Raleway", sans-serif;
+  position: relative;
+  width: 300px;
+  height: 20px;
+  line-height: 20px;
+  margin: 0 auto;
+  top: 21%;
+  /* left: 54%; */
+  z-index: 10;
+  background: url(./images/road.png);
+}
+/* header h2::after {
+  content: "";
+  width: 120vw;
+  height: 100vh;
+  background: ;
+  background-position: 0 -400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -200%;
+  left: -300%;
+  z-index: 30;
+} */
