@@ -1,10 +1,15 @@
 body {
   width: 100vw;
-  height: 300vh;
+  height: 1000vh;
   overflow-x: hidden;
   background: #0a2633;
   color: aliceblue;
   transition: 1s;
+}
+a {
+  color: aliceblue;
+  text-decoration: none;
+  font-weight: 900;
 }
 header {
   width: 100vw;
@@ -84,3 +89,353 @@ header h2 {
   left: -300%;
   z-index: 30;
 } */
+
+/* 左邊 */
+#zen-summary {
+  font-family: "Raleway", sans-serif;
+  width: 100px;
+  height: 700px;
+  display: inline-block;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  margin-left: 50px;
+  position: relative;
+  z-index: 13;
+  top: -100px;
+  left: 0;
+}
+#zen-summary::before {
+  content: "";
+  height: 1200px;
+  width: 150px;
+  background: url(./images/left_frame.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 10%;
+  z-index: 13;
+}
+#demonstration {
+  height: 1000px;
+  width: 80px;
+  position: absolute;
+  top: 15%;
+  left: -20%;
+}
+#dowonload {
+  height: 350px;
+  width: 50px;
+  font-size: 30px;
+  position: absolute;
+  top: 108%;
+  left: 67%;
+}
+#zen-intro {
+  position: relative;
+}
+#zen-intro::after {
+  content: "";
+  width: 100%;
+  height: 200vh;
+  position: absolute;
+  background: linear-gradient(
+    rgba(51, 51, 51, 0.158),
+    rgba(26, 26, 26, 0.438),
+    rgba(51, 51, 51, 0.171)
+  );
+  top: 70%;
+  z-index: -1;
+}
+/* 右邊圓圈 */
+#zen-preamble {
+  width: 400px;
+  height: 500px;
+  /* border: 5px solid wheat; */
+  font-size: 18px;
+  position: relative;
+  top: -800px;
+  right: -65%;
+  font-family: "Raleway", sans-serif;
+  line-height: 46px;
+  filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+}
+#zen-preamble::before {
+  content: "";
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  border: 5px solid white;
+  position: absolute;
+  top: -18%;
+  left: -30%;
+}
+#zen-preamble h3 {
+  font-size: 36px;
+  text-align: center;
+}
+
+#zen-explanation {
+  box-sizing: border-box;
+  width: 800px;
+  height: 800px;
+  padding: 150px 50px;
+  /* border: 2px solid white; */
+  background: rgba(255, 255, 255, 0.726);
+  color: #0a2633;
+  border-radius: 50%;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  line-height: 46px;
+  text-align: center;
+  position: relative;
+  top: -200px;
+  box-shadow: 0 0 30px 5px rgb(233, 233, 233);
+}
+/* 中間 */
+#zen-participation {
+  width: 1100px;
+  height: 500px;
+  /* border: 2px solid white; */
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  line-height: 30px;
+  position: relative;
+  left: 6%;
+}
+#zen-participation::after {
+  content: "";
+  position: absolute;
+  background: url(./images/man.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 750px;
+  height: 750px;
+  top: 70px;
+  left: 550px;
+  z-index: -1;
+}
+#zen-participation h3::after {
+  content: "";
+  position: absolute;
+  width: 750px;
+  height: 5px;
+  background-color: #fff;
+  z-index: -1;
+  top: 55;
+  right: 0;
+}
+#zen-participation h3 {
+  color: #0a2633;
+  font-size: 56px;
+  line-height: 50px;
+  padding: 5px 18px;
+  width: 320px;
+  height: 50px;
+  margin-bottom: 20px;
+  background-color: white;
+  display: inline-block;
+}
+#zen-participation p {
+  margin-bottom: 20px;
+}
+#pp {
+  width: 600px;
+}
+/* benefits */
+#zen-benefits {
+  width: 650px;
+  /* border: 2px solid white; */
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  line-height: 30px;
+  position: relative;
+  left: 6%;
+}
+#zen-benefits h3 {
+  color: #0a2633;
+  font-size: 56px;
+  line-height: 50px;
+  padding: 5px 18px;
+  width: 150x;
+  height: 45px;
+  margin-bottom: 20px;
+  background-color: white;
+  display: inline-block;
+}
+#zen-benefits h3:after {
+  content: "";
+  position: absolute;
+  width: 650px;
+  height: 5px;
+  background: white;
+  top: 55px;
+  left: 0;
+}
+/* requirements */
+#zen-requirements {
+  margin-top: 300px;
+  width: 100vw;
+  height: 70vh;
+  /* border: 2px solid white; */
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  line-height: 30px;
+  overflow: hidden auto;
+  background: url(./images/man3.jpg);
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#zen-requirements h3 {
+  font-size: 7rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 200px auto;
+  letter-spacing: 10px;
+  position: relative;
+}
+#zen-requirements h3:before {
+  content: "";
+  position: absolute;
+  width: 880px;
+  height: 5px;
+  background: rgb(255, 255, 255);
+  top: -60px;
+  left: 190px;
+}
+#zen-requirements h3:after {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 12px;
+  background: rgb(255, 255, 255);
+  top: 120px;
+  left: 0px;
+}
+#zen-requirements p {
+  margin: 50px 80px;
+  font-weight: 700;
+}
+/* footer */
+footer {
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  text-align: center;
+}
+footer a {
+  color: #0a2633;
+  font-size: 1.2rem;
+  padding: 10px;
+  line-height: 50px;
+}
+/* 下方連結 */
+.sidebar {
+  width: 100%;
+  height: 150vh;
+  background: url("./images/123.png");
+  margin-top: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  /* border: 1px solid #fff; */
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+/* plaint1 */
+.sidebar .wrapper .design-selection {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  padding-left: 300px;
+  padding-top: 10px;
+  color: #fff;
+  cursor: context-menu;
+}
+.design-selection ul li {
+  list-style-type: square;
+}
+.design-selection a {
+  color: #fff;
+  cursor: context-menu;
+  padding: 5px;
+}
+
+.design-selection::before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 50px;
+  width: 200px;
+  height: 200px;
+  background: url("./images/plaint1.png") no-repeat center/cover;
+}
+/* plaint2 */
+
+.sidebar .wrapper .design-archives {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  padding-left: 1100px;
+  padding-top: 300px;
+  color: #fff;
+  cursor: context-menu;
+}
+.design-archives ul li {
+  list-style-type: square;
+}
+.design-archives a {
+  color: #fff;
+  cursor: context-menu;
+  padding: 5px;
+}
+.design-archives::before {
+  content: "";
+  position: absolute;
+  top: 200px;
+  left: 750px;
+  width: 300px;
+  height: 300px;
+  color: #fff;
+  cursor: context-menu;
+  background: url("./images/plaint5.png") no-repeat center/cover;
+}
+/* plaint3 */
+.sidebar .wrapper .zen-resources {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  padding-left: 500px;
+  padding-top: 500px;
+  color: #fff;
+  cursor: context-menu;
+}
+.zen-resources ul li {
+  list-style-type: square;
+}
+.zen-resources a {
+  color: #fff;
+  cursor: context-menu;
+  padding: 5px;
+}
+.zen-resources::before {
+  content: "";
+  position: absolute;
+  top: 500px;
+  left: 200px;
+  width: 300px;
+  height: 300px;
+  color: #fff;
+  cursor: context-menu;
+  background: url("./images/plaint4.png") no-repeat center/cover;
+}

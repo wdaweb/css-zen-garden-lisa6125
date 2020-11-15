@@ -53,7 +53,7 @@
 		
 -->
 
-<body id="css-zen-garden">
+<body id="css-zen-garden" >
 <div class="page-wrapper">
 
 	<section class="intro" id="zen-intro">
@@ -63,8 +63,8 @@
 		</header>
 
 		<div class="summary" id="zen-summary" role="article">
-			<p>A demonstration of what can be accomplished through <abbr title="Cascading Style Sheets">CSS</abbr>-based design. Select any style sheet from the list to load it into this page.</p>
-			<p>Download the example <a href="file:///C:/examples/index" title="This page&#39;s source HTML code, not to be modified.">html file</a> and <a href="file:///C:/examples/style.css" title="This page&#39;s sample CSS, the file you may modify.">css file</a></p>
+			<p id="demonstration">A demonstration of what can be accomplished through <abbr title="Cascading Style Sheets">CSS</abbr>-based design. Select any style sheet from the list to load it into this page.</p>
+			<p id="dowonload">Download the example <a href="file:///C:/examples/index" title="This page&#39;s source HTML code, not to be modified.">html file</a> and <a href="file:///C:/examples/style.css" title="This page&#39;s sample CSS, the file you may modify.">css file</a></p>
 		</div>
 
 		<div class="preamble" id="zen-preamble" role="article">
@@ -85,8 +85,8 @@
 		<div class="participation" id="zen-participation" role="article">
 			<h3>Participation</h3>
 			<p>Strong visual design has always been our focus. You are modifying this page, so strong <abbr title="Cascading Style Sheets">CSS</abbr> skills are necessary too, but the example files are commented well enough that even <abbr title="Cascading Style Sheets">CSS</abbr> novices can use them as starting points. Please see the <a href="http://www.mezzoblue.com/zengarden/resources/" title="A listing of CSS-related resources"><abbr title="Cascading Style Sheets">CSS</abbr> Resource Guide</a> for advanced tutorials and tips on working with <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
-			<p>You may modify the style sheet in any way you wish, but not the <abbr title="HyperText Markup Language">HTML</abbr>. This may seem daunting at first if you’ve never worked this way before, but follow the listed links to learn more, and use the sample files as a guide.</p>
-			<p>Download the sample <a href="file:///C:/examples/index" title="This page&#39;s source HTML code, not to be modified.">HTML</a> and <a href="file:///C:/examples/style.css" title="This page&#39;s sample CSS, the file you may modify.">CSS</a> to work on a copy locally. Once you have completed your masterpiece (and please, don’t submit half-finished work) upload your <abbr title="Cascading Style Sheets">CSS</abbr> file to a web server under your control. <a href="http://www.mezzoblue.com/zengarden/submit/" title="Use the contact form to send us your CSS file">Send us a link</a> to an archive of that file and all associated assets, and if we choose to use it we will download it and place it on our server.</p>
+			<p id="pp">You may modify the style sheet in any way you wish, but not the <abbr title="HyperText Markup Language">HTML</abbr>. This may seem daunting at first if you’ve never worked this way before, but follow the listed links to learn more, and use the sample files as a guide.</p>
+			<p id="pp">Download the sample <a href="file:///C:/examples/index" title="This page&#39;s source HTML code, not to be modified.">HTML</a> and <a href="file:///C:/examples/style.css" title="This page&#39;s sample CSS, the file you may modify.">CSS</a> to work on a copy locally. Once you have completed your masterpiece (and please, don’t submit half-finished work) upload your <abbr title="Cascading Style Sheets">CSS</abbr> file to a web server under your control. <a href="http://www.mezzoblue.com/zengarden/submit/" title="Use the contact form to send us your CSS file">Send us a link</a> to an archive of that file and all associated assets, and if we choose to use it we will download it and place it on our server.</p>
 		</div>
 
 		<div class="benefits" id="zen-benefits" role="article">
@@ -115,9 +115,8 @@
 
 
 	<aside class="sidebar" role="complementary">
-		<div class="wrapper">
-
-			<div class="design-selection" id="design-selection">
+		<div class="wrapper " id="js-scene">
+			<div class="design-selection"  id="design-selection" data-depth="0.8" >
 				<h3 class="select">Select a Design:</h3>
 				<nav role="navigation">
 					<ul>
@@ -141,7 +140,7 @@
 				</nav>
 			</div>
 
-			<div class="design-archives" id="design-archives">
+			<div class="design-archives" id="design-archives" data-depth="1.2">
 				<h3 class="archives">Archives:</h3>
 				<nav role="navigation">
 					<ul>
@@ -158,7 +157,7 @@
 				</nav>
 			</div>
 
-			<div class="zen-resources" id="zen-resources">
+			<div class="zen-resources" id="zen-resources" data-depth="1.4">
 				<h3 class="resources">Resources:</h3>
 				<ul>
 					<li class="view-css">
@@ -199,10 +198,14 @@
 <div class="extra1" role="presentation"></div><div class="extra2" role="presentation"></div><div class="extra3" role="presentation"></div>
 <div class="extra4" role="presentation"></div><div class="extra5" role="presentation"></div><div class="extra6" role="presentation"></div>
 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js'></script>
 <script>
 	let header = document.getElementById('header')
 	let h1 = document.getElementById('title1')
 	let h2 = document.getElementById('title2')
+	let zs =document.getElementById('zen-summary')
+	let zp = document.getElementById('zen-preamble')
+	let zexp = document.getElementById('zen-explanation')
 
 	window.addEventListener('scroll', function () {
 		const value = window.scrollY;
@@ -211,6 +214,14 @@
 			h1.style.top = 20+ (value * 0.05) + '%';
 			h2.style.top = 21 + (value * 0.05) + '%';
 		}
+		if( value < 3200 ){
+			zs.style.top = -450 + (value*0.5) + 'px';
+			zp.style.top = -1050 + (value * 0.1) + 'px';
+			zexp.style.top = 2050 - (value * 0.8) + 'px';
+		}
 	})
+
+	var scene = document.getElementById('js-scene');
+	var parallax = new Parallax(scene);
 </script>
 </body></html>
