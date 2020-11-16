@@ -60,6 +60,7 @@ header h1 {
   margin: 0px auto;
   top: 20%;
   /*left: 30%; */
+  transition: 0.5s;
 }
 header h2 {
   color: aliceblue;
@@ -75,6 +76,7 @@ header h2 {
   /* left: 54%; */
   z-index: 10;
   background: url(./images/road.png);
+  transition: 0.5s;
 }
 /* header h2::after {
   content: "";
@@ -103,6 +105,7 @@ header h2 {
   z-index: 13;
   top: -100px;
   left: 0;
+  transition: 1s;
 }
 #zen-summary::before {
   content: "";
@@ -158,6 +161,7 @@ header h2 {
   font-family: "Raleway", sans-serif;
   line-height: 46px;
   filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+  transition: 1s;
 }
 #zen-preamble::before {
   content: "";
@@ -190,6 +194,7 @@ header h2 {
   position: relative;
   top: -200px;
   box-shadow: 0 0 30px 5px rgb(233, 233, 233);
+  transition: 1.5s;
 }
 /* 中間 */
 #zen-participation {
@@ -356,14 +361,14 @@ footer a {
   padding-left: 300px;
   padding-top: 10px;
   color: #fff;
-  cursor: context-menu;
+  /* cursor: context-menu; */
 }
 .design-selection ul li {
   list-style-type: square;
 }
 .design-selection a {
   color: #fff;
-  cursor: context-menu;
+  /* cursor: context-menu; */
   padding: 5px;
 }
 
@@ -387,14 +392,14 @@ footer a {
   padding-left: 1100px;
   padding-top: 300px;
   color: #fff;
-  cursor: context-menu;
+  /* cursor: context-menu; */
 }
 .design-archives ul li {
   list-style-type: square;
 }
 .design-archives a {
   color: #fff;
-  cursor: context-menu;
+  /* cursor: context-menu; */
   padding: 5px;
 }
 .design-archives::before {
@@ -405,7 +410,7 @@ footer a {
   width: 300px;
   height: 300px;
   color: #fff;
-  cursor: context-menu;
+  /* cursor: context-menu; */
   background: url("./images/plaint5.png") no-repeat center/cover;
 }
 /* plaint3 */
@@ -418,14 +423,14 @@ footer a {
   padding-left: 500px;
   padding-top: 500px;
   color: #fff;
-  cursor: context-menu;
+  /* cursor: context-menu; */
 }
 .zen-resources ul li {
   list-style-type: square;
 }
 .zen-resources a {
   color: #fff;
-  cursor: context-menu;
+  /* cursor: context-menu; */
   padding: 5px;
 }
 .zen-resources::before {
@@ -436,6 +441,6 @@ footer a {
   width: 300px;
   height: 300px;
   color: #fff;
-  cursor: context-menu;
+  /* cursor: context-menu; */
   background: url("./images/plaint4.png") no-repeat center/cover;
 }
